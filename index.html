@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Calculator</title>
+    <link href="fonts/Jost-Light.woff2" as="font" crossorigin rel="preload" type="font/woff2" />
+    <link href="fonts/Jost-Medium.woff2" as="font" crossorigin rel="preload" type="font/woff2" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="PriceCalculator.js"></script>
+  </head>
+  <body class="page__body">
+    <section class="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="services__header">
+          <h1 class="services__title title" id="services-title">Выберите интересующие Вас услуги</h1>
+          <div class="services__promotions">
+            <p>Скидка не расспространяется на пакеты</p>
+            <p>При выборе любых 2-3 пунктов - скидка <span>5%</span></p>
+            <p>При выборе любых 4-5 пунктов - скидка <span>10%</span></p>
+            <p>При выборе от 6 пунктов и больше - скидка <span>15%</span></p>
+          </div>
+        </header>
+        <div class="services__calculator calculator" data-js-calculator>
+          <div class="calculator__group">
+            <h2 class="calculator__title title title--with-underline">Telegram:</h2>
+            <ul class="list-reset calculator__services-list">
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox1"
+                    value="9000"
+                    type="checkbox"
+                    data-js-service-checkbox
+                  />
+                  <p class="service__name">Янтарный ДЛБ</p>
+                </label>
+              </li>
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox2"
+                    value="2000"
+                    type="checkbox"
+                    data-js-service-checkbox
+                  />
+                  <p class="service__name">Калининград Ироничный</p>
+                </label>
+              </li>
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox3"
+                    value="800"
+                    type="checkbox"
+                    data-js-service-checkbox
+                  />
+                  <p class="service__name">Дороги Калининграда и области</p>
+                </label>
+              </li>
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox4"
+                    value="1200"
+                    type="checkbox"
+                    data-js-service-checkbox
+                  />
+                  <p class="service__name">Эй, Калининград</p>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="calculator__group">
+            <h2 class="calculator__title title title--with-underline">Вконтакте:</h2>
+            <ul class="list-reset calculator__services-list">
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox5"
+                    value="8000"
+                    type="checkbox"
+                    data-js-service-checkbox
+                  />
+                  <p class="service__name">Янтарный ДЛБ</p>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="calculator__group">
+            <h2 class="calculator__title title title--with-underline">Инстаграм:</h2>
+            <ul class="list-reset calculator__services-list">
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox6"
+                    value="4000"
+                    type="checkbox"
+                    data-js-service-checkbox
+                  />
+                  <p class="service__name">Янтарный ДЛБ, Пост</p>
+                </label>
+              </li>
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox7"
+                    value="4000"
+                    type="checkbox"
+                    data-js-service-checkbox
+                  />
+                  <p class="service__name">Янтарный ДЛБ, Сторис</p>
+                </label>
+              </li>
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox8"
+                    value="3000"
+                    type="checkbox"
+                    data-js-service-checkbox
+                  />
+                  <p class="service__name">Калининград Ироничный, Пост</p>
+                </label>
+              </li>
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox9"
+                    value="3000"
+                    type="checkbox"
+                    data-js-service-checkbox
+                  />
+                  <p class="service__name">Калининград Ироничный, Сторис</p>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="calculator__group">
+            <h2 class="calculator__title title title--with-underline">Пакетные предложения:</h2>
+            <ul class="list-reset calculator__services-list">
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox10"
+                    value="11700"
+                    type="checkbox"
+                    data-js-package-checkbox
+                    data-js-related="checkbox1, checkbox2, checkbox3, checkbox4"
+                  />
+                  <p class="service__name">Пакет "Весь телеграм"</p>
+                  <p class="service__descr">
+                    Янтарный ДЛБ, Калининград Ироничный, Дороги Калининграда и области, Эй, Калининград
+                  </p>
+                </label>
+              </li>
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox11"
+                    value="7200"
+                    type="checkbox"
+                    data-js-package-checkbox
+                    data-js-related="checkbox2, checkbox8, checkbox9"
+                  />
+                  <p class="service__name">Пакет "Ироничный"</p>
+                  <p class="service__descr">Калининград Ироничный (Телеграм, Инстаграм пост и сторис)</p>
+                </label>
+              </li>
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox12"
+                    value="11200"
+                    type="checkbox"
+                    data-js-package-checkbox
+                    data-js-related="checkbox6, checkbox7, checkbox8, checkbox9"
+                  />
+                  <p class="service__name">Пакет "Инстаграм"</p>
+                  <p class="service__descr">Инстаграм Янтарный ДЛБ и Калининград Ироничный (Пост+сторис)</p>
+                </label>
+              </li>
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox13"
+                    value="20000"
+                    type="checkbox"
+                    data-js-package-checkbox
+                    data-js-related="checkbox1, checkbox5, checkbox6, checkbox7"
+                  />
+                  <p class="service__name">Пакет "Весь ЯД"</p>
+                  <p class="service__descr">Янтарный ДЛБ ВК, телеграм и инстаграм (пост+сторис)</p>
+                </label>
+              </li>
+              <li class="service">
+                <label class="service__label">
+                  <input
+                    class="service__checkbox"
+                    id="checkbox14"
+                    value="28000"
+                    type="checkbox"
+                    data-js-package-checkbox
+                    data-js-related="all"
+                  />
+                  <p class="service__name">Пакет "Везде"</p>
+                  <p class="service__descr">Все паблики</p>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="calculator__total">
+            Стоимость рекламы: <span class="calculator__price" data-js-calculator-total-price>0</span> ₽
+            <div class="calculator__discount" data-js-discount></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

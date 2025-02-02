@@ -1,0 +1,189 @@
+@font-face {
+  src: url('./fonts/Jost-Light.woff2') format('woff2');
+  font-family: 'Jost';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url('./fonts/Jost-Medium.woff2') format('woff2');
+  font-family: 'Jost';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-light: #fff;
+  --color-black: #000;
+  --color-accent: #db8d39;
+  --color-gray: #787878;
+
+  --font-family: 'Jost', sans-serif;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 360px;
+  min-height: 100%;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin: 0;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.title--with-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+}
+
+.services {
+  color: var(--color-black);
+  background-color: var(--color-light);
+  padding-top: 10px;
+  padding-inline: 20px;
+}
+
+.services__header {
+  display: grid;
+  row-gap: 15px;
+  margin-bottom: 15px;
+}
+
+.services__title {
+  font-size: 20px;
+}
+
+.services__promotions {
+  display: grid;
+  row-gap: 10px;
+  font-size: 16px;
+
+  p {
+    margin: 0;
+  }
+
+  span {
+    border-radius: 5px;
+    color: var(--color-light);
+    background-color: var(--color-accent);
+    padding-inline: 8px;
+  }
+}
+
+.calculator {
+  --groupRowGap: 10px;
+
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  row-gap: var(--groupRowGap);
+}
+
+.calculator__group {
+  display: grid;
+  row-gap: 7px;
+}
+
+.calculator__title {
+  font-size: 20px;
+}
+
+.calculator__services-list {
+  display: grid;
+  row-gap: 5px;
+}
+
+.service__label {
+  display: grid;
+  grid-template-areas:
+    'checkbox name'
+    'null description';
+  column-gap: 5px;
+  align-items: center;
+  justify-content: start;
+  font-size: 16px;
+  color: var(--color-black);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+@media (any-hover: hover) {
+  .service__label:hover {
+    color: var(--color-gray);
+  }
+}
+
+.service__checkbox {
+  appearance: none;
+  grid-area: checkbox;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  padding: 1px;
+  transition: background-color 0.1s ease, scale 0.2s ease;
+}
+
+.service__checkbox:checked {
+  scale: 1.2;
+  background-clip: content-box;
+  background-color: var(--color-accent);
+}
+
+.service__name {
+  grid-area: name;
+  margin: 0;
+}
+
+.service__descr {
+  grid-area: description;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.calculator__total {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-top: calc(10px - var(--groupRowGap));
+  font-size: 21px;
+}
+
+.calculator__discount {
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  padding-inline: 8px;
+}
